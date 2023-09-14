@@ -1,0 +1,76 @@
+{
+  "name": "michelmelo/laravel-sibs-payments",
+  "description": "Laravel library to communicate with SIBS - Open Payment Platform.",
+  "homepage": "https://github.com/michelmelo/laravel-sibs-payments",
+  "type": "library",
+  "keywords": [
+    "http",
+    "rest",
+    "mbway",
+    "payments",
+    "web service",
+    "sibs",
+    "laravel",
+    "mobile payment",
+    "VISA",
+    "MASTER",
+    "AMEX",
+    "VPAY",
+    "MAESTRO",
+    "VISADEBIT",
+    "VISAELECTRON"
+  ],
+  "license": "MIT",
+  "authors": [{
+    "name": "Michel Melo",
+    "email": "eu@michelmelo.pt",
+    "homepage": "http://www.michelmelo.pt"
+  }],
+  "require": {
+    "php": "^7.4",
+    "ext-json": "*",
+    "guzzlehttp/guzzle": "^6.3"
+  },
+  "require-dev": {
+    "friendsofphp/php-cs-fixer": "^3.4",
+    "laravel/framework": "^8.0",
+    "mockery/mockery": "^1.2",
+    "orchestra/testbench": "^6.34",
+    "php-coveralls/php-coveralls": "^2.1",
+    "phpunit/php-code-coverage": "^7.0",
+    "phpunit/phpunit": "^8.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "MichelMelo\\Sibs\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "MichelMelo\\Sibs\\Tests\\": "tests/"
+    }
+  },
+  "config": {
+    "sort-packages": true
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "MichelMelo\\Sibs\\SibsServiceProvider"
+      ],
+      "aliases": {
+        "Sibs": "MichelMelo\\Sibs\\Facade\\Sibs"
+      }
+    }
+  },
+  "scripts": {
+    "test": [
+      "vendor/bin/phpunit --colors=always --debug --filter"
+    ],
+    "tests": [
+      "php -d memory_limit=512M vendor/bin/phpunit --colors=always --bootstrap vendor/autoload.php --testdox tests"
+    ]
+  },
+  "minimum-stability": "dev",
+  "prefer-stable": true
+}
