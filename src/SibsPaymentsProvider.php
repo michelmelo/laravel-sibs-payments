@@ -6,9 +6,9 @@ use Illuminate\Support\ServiceProvider;
 use MichelMelo\Sibs\Services\SibsService;
 
 /**
- * Class SibsServiceProvider.
+ * Class SibsPaymentsProvider.
  */
-class SibsServiceProvider extends ServiceProvider
+class SibsPaymentsProvider extends ServiceProvider
 {
     public function boot()
     {
